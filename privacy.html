@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c10">
+  <title>梦瓶 · 隐私说明</title>
+  <style>
+    :root { --ink:#090c10; --paper:#e9e4d9; --dim:rgba(233,228,217,.68); --faint:rgba(233,228,217,.38); --line:rgba(233,228,217,.15); --jade:#a8c8bd; --serif:"Songti SC","STSong","Noto Serif CJK SC",serif; --sans:"PingFang SC","Hiragino Sans GB",sans-serif; }
+    * { box-sizing:border-box; }
+    html { background:var(--ink); color-scheme:dark; }
+    body { margin:0; min-width:320px; background:radial-gradient(circle at 78% 8%,rgba(73,107,101,.2),transparent 32rem),var(--ink); color:var(--paper); font-family:var(--sans); }
+    a { color:var(--jade); }
+    .shell { width:min(100% - 2rem,860px); margin:auto; padding:4rem 0 5rem; }
+    header { padding-bottom:2rem; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:.8rem; color:var(--paper); text-decoration:none; font-family:var(--serif); letter-spacing:.22em; }
+    .mark { width:1.8rem; height:1.8rem; border:1px solid var(--line); border-radius:50% 50% 46% 54%; position:relative; }
+    .mark::after { content:""; position:absolute; left:50%; bottom:.35rem; width:4px; height:4px; border-radius:50%; background:var(--jade); box-shadow:0 0 10px var(--jade); transform:translateX(-50%); }
+    .eyebrow { margin:3.8rem 0 1rem; color:var(--jade); font-size:.62rem; letter-spacing:.2em; }
+    h1 { margin:0; font-family:var(--serif); font-size:clamp(2.6rem,7vw,5rem); font-weight:400; letter-spacing:.08em; }
+    .updated { margin:1.2rem 0 0; color:var(--faint); font-size:.68rem; letter-spacing:.08em; }
+    article { margin-top:3rem; }
+    h2 { margin:2.8rem 0 1rem; font-family:var(--serif); font-size:1.45rem; font-weight:400; letter-spacing:.07em; }
+    p, li { color:var(--dim); font-size:.82rem; line-height:2; }
+    ul { padding-left:1.2rem; }
+    .notice { margin-top:2rem; padding:1.2rem 1.4rem; border-left:1px solid var(--jade); background:rgba(168,200,189,.05); }
+    .notice p { margin:0; }
+    footer { display:flex; justify-content:space-between; gap:1rem; margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--faint); font-size:.62rem; letter-spacing:.08em; }
+    footer a { color:var(--faint); }
+    @media(max-width:600px){ .shell{padding:2rem 0 3rem} footer{align-items:flex-start;flex-direction:column} }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>梦瓶</a>
+      <p class="eyebrow">PRIVACY NOTE / 隐私说明</p>
+      <h1>你的愿望，只属于你。</h1>
+      <p class="updated">原型版本 · 更新日期：2026年11月23日</p>
+    </header>
+
+    <article>
+      <div class="notice">
+        <p>《梦瓶》是一个低刺激的数字时间胶囊。我们不设置账号体系，不做用户画像，不使用广告追踪，也不把愿望展示给其他用户。</p>
+      </div>
+
+      <h2>1. 我们处理哪些信息</h2>
+      <ul>
+        <li>你主动填写的愿望名称、愿望正文、选择材质和约定日期。</li>
+        <li>保存在浏览器中的梦瓶状态，用于刷新后继续查看。</li>
+        <li>用户测试页中的参与者编号、任务完成情况、评分和访谈记录。</li>
+      </ul>
+      <p>我们不要求姓名、手机号、身份证号、学校、单位或精确位置。</p>
+
+      <h2>2. 数据保存在哪里</h2>
+      <p>当前原型默认将梦瓶保存在你的浏览器 LocalStorage 中，内容不会自动上传到服务器。用户测试记录也只保存在当前浏览器。</p>
+      <p>清除浏览器站点数据、点击“清空本机梦瓶”或使用无痕窗口关闭页面，都可能删除相关内容。当前版本不提供云同步和找回服务。</p>
+
+      <h2>3. AI未来回声如何处理</h2>
+      <p>当部署方启用真实AI模式时，愿望名称、愿望正文、材质和约定日期会发送至部署方配置的模型服务，用于生成未来回声。API密钥仅保存在服务端，不发送到浏览器。</p>
+      <p>当前公开演示可使用本地规则或模拟AI响应，不向外部模型服务发送愿望正文。正式启用真实AI前，部署方应在本页补充模型服务商名称、数据保留政策和服务地区。</p>
+
+      <h2>4. AI不做什么</h2>
+      <ul>
+        <li>不预测命运、健康、财富或关系结果。</li>
+        <li>不判断愿望是否成功。</li>
+        <li>不把你的愿望出售、出租或用于广告投放。</li>
+        <li>不替用户作出医疗、法律或投资决定。</li>
+      </ul>
+
+      <h2>5. 你的权利</h2>
+      <p>你可以随时查看、复制或删除本机梦瓶。梦瓶柜底部提供“清空本机梦瓶”入口；用户测试页提供“清空本机记录”和导出功能。</p>
+      <p>若正式版本启用云端存储，部署方必须补充查询、导出、更正、删除和撤回授权的具体方式。</p>
+
+      <h2>6. 第三方服务</h2>
+      <p>当前交互原型不加载第三方分析、广告或社交插件。若上线时增加云服务器、模型API、对象存储或CDN，部署方应在正式隐私说明中逐项披露服务商、处理目的和数据范围。</p>
+
+      <h2>7. 未成年人</h2>
+      <p>本作品面向竞赛参与者与一般设计体验者。正式公开运营前，部署方应根据适用法律补充未成年人保护和监护人同意机制。</p>
+
+      <h2>8. 说明更新</h2>
+      <p>隐私说明发生重要变化时，应在产品内显著提示。当前文件为参赛原型版本，正式部署主体、联系方式和模型服务商信息须在上线前补齐。</p>
+    </article>
+
+    <footer>
+      <span>瓶行未来 PARALLEL BOTTLE · 2026</span>
+      <a href="index.html">返回梦瓶</a>
+    </footer>
+  </main>
+</body>
+</html>

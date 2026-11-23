@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>梦瓶 · 用户测试记录</title>
+  <link rel="stylesheet" href="testing.css">
+</head>
+<body>
+  <main class="test-shell">
+    <header class="test-header">
+      <div>
+        <p>DREAM VESSEL / USABILITY TEST</p>
+        <h1>梦瓶用户测试记录</h1>
+      </div>
+      <a href="index.html" target="_blank" rel="noreferrer">打开原型 ↗</a>
+    </header>
+
+    <section class="test-grid">
+      <form id="testForm">
+        <fieldset>
+          <legend>01 / 参与者信息</legend>
+          <div class="field-row">
+            <label>参与者编号<input name="participant" required placeholder="U01"></label>
+            <label>年龄段
+              <select name="age">
+                <option>18—22</option><option>23—27</option><option>28—35</option><option>36—45</option>
+              </select>
+            </label>
+            <label>设备
+              <select name="device"><option>手机</option><option>平板</option><option>桌面电脑</option></select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>02 / 任务观察</legend>
+          <div class="task">
+            <div><b>T1</b><span>找到封存愿望的入口，并说明它是什么产品</span></div>
+            <label class="inline">完成<input type="checkbox" name="t1"></label>
+            <input name="t1note" placeholder="用时 / 卡点 / 原话">
+          </div>
+          <div class="task">
+            <div><b>T2</b><span>选择一个材质，并说出选择理由</span></div>
+            <label class="inline">完成<input type="checkbox" name="t2"></label>
+            <input name="t2note" placeholder="选择哪个材质 / 理由">
+          </div>
+          <div class="task">
+            <div><b>T3</b><span>设置未来日期并完成封存</span></div>
+            <label class="inline">完成<input type="checkbox" name="t3"></label>
+            <input name="t3note" placeholder="用时 / 是否理解不可修改">
+          </div>
+          <div class="task">
+            <div><b>T4</b><span>打开梦瓶，并复述未来回声的含义</span></div>
+            <label class="inline">完成<input type="checkbox" name="t4"></label>
+            <input name="t4note" placeholder="能否区分原始愿望与AI回声">
+          </div>
+          <div class="task">
+            <div><b>T5</b><span>返回梦瓶柜，并在刷新后确认内容仍在</span></div>
+            <label class="inline">完成<input type="checkbox" name="t5"></label>
+            <input name="t5note" placeholder="是否理解仅保存在本地">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>03 / 主观评分</legend>
+          <div class="ratings">
+            <label>容易使用<input type="range" name="ease" min="1" max="7" value="5"><output>5</output></label>
+            <label>情感共鸣<input type="range" name="emotion" min="1" max="7" value="5"><output>5</output></label>
+            <label>信任感<input type="range" name="trust" min="1" max="7" value="5"><output>5</output></label>
+            <label>愿意再次使用<input type="range" name="intent" min="1" max="7" value="5"><output>5</output></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>04 / 访谈记录</legend>
+          <label>用户认为这个产品是什么？<textarea name="understanding" rows="3"></textarea></label>
+          <label>最困惑或最不信任的地方<textarea name="friction" rows="3"></textarea></label>
+          <label>最打动用户的一个瞬间<textarea name="delight" rows="3"></textarea></label>
+          <label>用户主动提出的改进建议<textarea name="suggestion" rows="3"></textarea></label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit">保存本次测试</button>
+          <button type="button" id="exportBtn" class="secondary">导出全部JSON</button>
+          <button type="button" id="downloadBtn" class="secondary">下载记录表</button>
+          <button type="button" id="clearBtn" class="danger">清空本机记录</button>
+        </div>
+      </form>
+
+      <aside class="test-aside">
+        <div class="aside-card">
+          <span>主持人口径</span>
+          <p>请尽量不要解释界面。先让参与者独立完成任务，再追问他们如何理解。</p>
+        </div>
+        <div class="aside-card">
+          <span>关键验证</span>
+          <ul>
+            <li>是否理解“封存后不可修改”</li>
+            <li>是否区分原始愿望与AI回声</li>
+            <li>是否感到被催促或被评价</li>
+            <li>是否愿意等待一个真实日期</li>
+            <li>是否接受本地存储而非云同步</li>
+          </ul>
+        </div>
+        <div class="aside-card">
+          <span>隐私</span>
+          <p>本页不收集姓名、联系方式、学校或单位。测试记录仅保存在当前浏览器，可随时导出或清除。</p>
+        </div>
+        <div class="record-count"><b id="recordCount">0</b><span>条已保存记录</span></div>
+      </aside>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="testing.js"></script>
+</body>
+</html>
